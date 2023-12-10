@@ -35,11 +35,29 @@ public class Animation : MonoBehaviour
     public float m_step4explodeDuration;
     public float m_step4lerpleftDuration;
 
+    [Header("Frame5: Exploded components Setting")]
+    public GameObject m_componentParent;
+    public float durationOut;
+    public GameObject m_lipo;
+    public GameObject m_microcontroller;
+    public GameObject m_wireless;
+    public GameObject m_PET1;
+    public GameObject m_PET2;
+
+    public GameObject m_lipoEnd;
+    public GameObject m_microcontrollerEnd;
+    public GameObject m_wirelessEnd;
+    public GameObject m_PET1End;
+    public GameObject m_PET2End;
+    
+
     [Header("Frame5: Body at Center Settings")]
     public GameObject m_bodyCenterPos;
     public GameObject m_topOutPos;
     public GameObject m_bottomOutPos;
     public float m_step5lerpDuration;
+
+    public Vector3 targetScale = new Vector3(1f, 1f, 1f);
 
 
     [Header("Counter")]
@@ -49,7 +67,7 @@ public class Animation : MonoBehaviour
         m_parentObj.SetActive(false);
         m_parentSlideLeft.SetActive(false);
         m_initialObj.SetActive(true);
-        Physics.gravity = new Vector3(0, -20F, 0);
+        Physics.gravity = new Vector3(0, -50f, 0);
     }
 
     void Update()
@@ -61,11 +79,14 @@ public class Animation : MonoBehaviour
                 case 0:
                     m_initialObj.GetComponent<Collider>().enabled = false;
                     m_initialObj.GetComponent<Rigidbody>().isKinematic = true;
-                    Vector3 targetScale = new Vector3(1f, 1f, 1f);
                     RotateObj(m_initialObj, m_rotationTime1, m_rotationAngle, targetScale);
                     break;
                 case 1:
+                    m_initialObj.GetComponent<Collider>().enabled = false;
+                    m_initialObj.GetComponent<Rigidbody>().isKinematic = true;
                     Step2Lerp(m_initialObj, m_step2Target.transform, m_rotationTime2);
+                    // Vector3 targetScale = new Vector3(1f, 1f, 1f);
+                    ScaleObj(m_initialObj, m_rotationTime1, targetScale);
                     break;
                 case 2:
                     ExplodeObj(m_initialObj, m_parentObj, m_bottomPosExploded.transform.position, m_bodyPosExploded.transform.position, m_topPosExploded.transform.position, m_step2lerpDuration);
@@ -74,12 +95,24 @@ public class Animation : MonoBehaviour
                 //     // StartLerpingPosition(m_parentObj.transform, m_parentSlideLeft.transform.position, m_step3moveDuration);
                 //     break;
                 case 3:
-                    ExpodedViewSlideOut(m_bodyObj, m_bodyPosExplodedOut.transform.position, m_step4explodeDuration);
+                    ExpodedViewSlideOut(m_bodyObj, m_bodyPosExplodedOut.transform, m_step4explodeDuration);
                     break;
                 case 4:
+                    m_componentParent.SetActive(true);
+                    StartLerpingPosition(m_lipo.transform, m_lipoEnd.transform.position, durationOut);
+                    StartLerpingPosition(m_microcontroller.transform, m_microcontrollerEnd.transform.position, durationOut);
+                    StartLerpingPosition(m_wireless.transform, m_wirelessEnd.transform.position, durationOut);
+                    StartCoroutine(LerpToTransform(m_PET1, m_PET1End.transform, durationOut));
+                    StartCoroutine(LerpToTransform(m_PET2, m_PET2End.transform, durationOut));
+                    break;
+                case 5:
+                    m_componentParent.SetActive(false);
                     StartCoroutine(LerpToTransform(m_bodyObj, m_bodyCenterPos.transform, m_step5lerpDuration));
                     StartLerpingPosition(m_topObj.transform, m_topOutPos.transform.position, m_step5lerpDuration-0.05f);
                     StartLerpingPosition(m_bottomObj.transform, m_bottomOutPos.transform.position, m_step5lerpDuration-0.05f);
+                    break;
+                case 6:
+                    RotateObj(m_bodyObj, 5f, 360f, targetScale);
                     break;
                 default:
                     Debug.Log("Counter reaches the last frame...");
@@ -94,9 +127,10 @@ public class Animation : MonoBehaviour
     }
 
     
-    public void ExpodedViewSlideOut(GameObject body, Vector3 bodySlideOutPos, float lerpDuration)
+    public void ExpodedViewSlideOut(GameObject body, Transform bodySlideOutPos, float lerpDuration)
     {
-        StartLerpingPosition(body.transform, bodySlideOutPos, lerpDuration);
+        // StartLerpingPosition(body.transform, bodySlideOutPos, lerpDuration);
+        StartCoroutine(LerpToTransform(body, bodySlideOutPos, lerpDuration));
     }
 
      public void ExplodeObj(GameObject oldObj, GameObject newObj, Vector3 position0, Vector3 position1, Vector3 position2, float lerpDuration)
@@ -137,6 +171,27 @@ public class Animation : MonoBehaviour
 
         // Ensure the final position matches the target position exactly
         objectToLerp.position = targetPosition;
+    }
+
+     public void ScaleObj(GameObject obj, float duration, Vector3 targetScale)
+    {
+        StartCoroutine(Scale(obj, duration, targetScale));
+    }
+
+    IEnumerator Scale(GameObject obj, float duration, Vector3 targetScale)
+    {
+        Vector3 startScale = obj.transform.localScale;
+        float t = 0.0f;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            obj.transform.localScale = Vector3.Lerp(startScale, targetScale, t / duration);
+            yield return null;
+        }
+
+        // Ensure the scale is set to the final value
+        obj.transform.localScale = targetScale;
     }
 
     public void RotateObj(GameObject obj, float duration, float angle, Vector3 targetScale)
