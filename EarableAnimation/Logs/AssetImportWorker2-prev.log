@@ -1,0 +1,243 @@
+Unity Editor version:    2021.3.19f1 (c9714fde33b6)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.1.2 (Build 23B2091)
+Darwin version:          23.1.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        36864 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/manxueyingli/Github/Ear-able/EarableAnimation
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+56534
+Successfully changed project path to: /Users/manxueyingli/Github/Ear-able/EarableAnimation
+/Users/manxueyingli/Github/Ear-able/EarableAnimation
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [7910317760] Host "[IP] 10.250.244.109 [Port] 0 [Flags] 2 [Guid] 2435466152 [EditorId] 2435466152 [Version] 1048832 [Id] OSXEditor(0,dhcp-10-250-244-109.harvard.edu) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [7910317760] Host "[IP] 10.250.244.109 [Port] 0 [Flags] 2 [Guid] 2435466152 [EditorId] 2435466152 [Version] 1048832 [Id] OSXEditor(0,dhcp-10-250-244-109.harvard.edu) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 75.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.19f1 (c9714fde33b6)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/manxueyingli/Github/Ear-able/EarableAnimation/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M3 Max (high power)
+Metal devices available: 1
+0: Apple M3 Max (high power)
+Using device Apple M3 Max (high power)
+Initializing Metal device caps: Apple M3 Max
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56354
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000420 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 78.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.339 seconds
+Domain Reload Profiling:
+	ReloadAssembly (339ms)
+		BeginReloadAssembly (21ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (259ms)
+			LoadAssemblies (21ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (61ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (16ms)
+			SetupLoadedEditorAssemblies (160ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (2ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (79ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (60ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001530 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/manxueyingli/Github/Ear-able/EarableAnimation/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/manxueyingli/Github/Ear-able/EarableAnimation/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 68.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.584 seconds
+Domain Reload Profiling:
+	ReloadAssembly (585ms)
+		BeginReloadAssembly (38ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (2ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (12ms)
+		EndReloadAssembly (496ms)
+			LoadAssemblies (23ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (132ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (290ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (1ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (69ms)
+				BeforeProcessingInitializeOnLoad (56ms)
+				ProcessInitializeOnLoadAttributes (95ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (1ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.19f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5693 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 76 unused Assets / (419.8 KB). Loaded Objects now: 6115.
+Memory consumption went from 209.9 MB to 209.5 MB.
+Total: 4.868125 ms (FindLiveObjects: 0.148416 ms CreateObjectMapping: 0.051750 ms MarkObjects: 4.427084 ms  DeleteObjects: 0.240459 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 40784.126340 seconds.
+  path: Assets/Materials/Light.mat
+  artifactKey: Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Light.mat using Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c64db2561861db5709b2f7ebe09926f') in 0.163340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 166.204088 seconds.
+  path: Assets/Materials/Light.mat
+  artifactKey: Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Light.mat using Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfacb9ad699dc0a1d2bae6a337e0746a') in 0.035449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 208.226305 seconds.
+  path: Assets/Scenes/Test/LightingData.asset
+  artifactKey: Guid(816ee118744d9411e938416bb254221d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test/LightingData.asset using Guid(816ee118744d9411e938416bb254221d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2ee91bd4f20099fca1fec3996fa1e8') in 0.027499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/Test/ReflectionProbe-0.exr
+  artifactKey: Guid(b7debaed2eae14f33ba061d5b079f81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test/ReflectionProbe-0.exr using Guid(b7debaed2eae14f33ba061d5b079f81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16dc4e89504f4a645b5840e6b7ac5dc3') in 0.638736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Scenes/Test/Lightmap-3_comp_light.exr
+  artifactKey: Guid(67df85d46d310426181775d511c35a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test/Lightmap-3_comp_light.exr using Guid(67df85d46d310426181775d511c35a7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a54f1fc505df060ff6c7abc8abf002') in 0.037801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scenes/Test/Lightmap-1_comp_dir.png
+  artifactKey: Guid(75b964fd1960649c18ba0b4e6089cf18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test/Lightmap-1_comp_dir.png using Guid(75b964fd1960649c18ba0b4e6089cf18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc6659075eca3c4636dd9db5c72f94b1') in 0.032116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Scenes/Test/Lightmap-1_comp_light.exr
+  artifactKey: Guid(4a51225336a9c473283d41968cb9f16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test/Lightmap-1_comp_light.exr using Guid(4a51225336a9c473283d41968cb9f16f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9042db31ec4945876802fcacd82c4bb') in 0.003640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 139.701546 seconds.
+  path: Assets/Materials/Light.mat
+  artifactKey: Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Light.mat using Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9576eb0f6dfa2d4445b899cb53ad2f') in 0.017119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.537162 seconds.
+  path: Assets/Materials/Light 1.mat
+  artifactKey: Guid(f7dba18c592d04147b1f9f10d4967f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Light 1.mat using Guid(f7dba18c592d04147b1f9f10d4967f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5eb986a0deaceffbd8ff483882997d') in 0.013976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.940295 seconds.
+  path: Assets/Materials/purplelight.mat
+  artifactKey: Guid(f7dba18c592d04147b1f9f10d4967f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/purplelight.mat using Guid(f7dba18c592d04147b1f9f10d4967f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ba580fa0c2f06873dc3b6d71547a47') in 0.016123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.573173 seconds.
+  path: Assets/Materials/orangeLight.mat
+  artifactKey: Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/orangeLight.mat using Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef5c2e76b185cf5aea744b6e82f2d26') in 0.017563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.835310 seconds.
+  path: Assets/Materials/orangeLight.mat
+  artifactKey: Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/orangeLight.mat using Guid(e84f87fc4d3344989b8336af9e477a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '191c931c60bb21c9f0d3032c57a83432') in 0.014770 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
