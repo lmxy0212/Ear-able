@@ -5,13 +5,12 @@ using UnityEngine;
 public class Animation : MonoBehaviour
 {
     [Header("3D Models")]
-    public GameObject m_caseObj;
+    public GameObject m_initialObj;
     public GameObject m_parentObj;
     public GameObject m_topObj;
     public GameObject m_bodyObj;
     public GameObject m_bottomObj;
 
-    
     [Header("Frame0: Rotation Settings")]
     public float m_rotationTime1;
     public float m_rotationAngle;
@@ -26,15 +25,31 @@ public class Animation : MonoBehaviour
     public GameObject m_bottomPosExploded;
     public float m_step2lerpDuration;
 
-    [Header("Frame3: Exploded View Expand Settings")]
+    [Header("Frame3: Move Left Settings")]
+    public GameObject m_parentSlideLeft;
+    public float m_step3moveDuration;
+
+    [Header("Frame4: Exploded View Expand Settings")]
     public GameObject m_topPosExplodedClose;
-    public GameObject m_bodyPosExplodedOut;
-    public float m_step3lerpDuration;
+    public GameObject m_bodyPosExplodedOut; 
+    public float m_step4explodeDuration;
+    public float m_step4lerpleftDuration;
+
+    [Header("Frame5: Body at Center Settings")]
+    public GameObject m_bodyCenterPos;
+    public GameObject m_topOutPos;
+    public GameObject m_bottomOutPos;
+    public float m_step5lerpDuration;
 
 
     [Header("Counter")]
     public int m_stepCounter;
 
+    void start(){
+        m_parentObj.SetActive(false);
+        m_parentSlideLeft.SetActive(false);
+        m_initialObj.SetActive(true);
+    }
 
     void Update()
     {
@@ -43,16 +58,24 @@ public class Animation : MonoBehaviour
             switch(m_stepCounter) 
             {
             case 0:
-                RotateObj(m_caseObj, m_rotationTime1, m_rotationAngle);
+                RotateObj(m_initialObj, m_rotationTime1, m_rotationAngle);
                 break;
             case 1:
-                Step2Lerp(m_caseObj, m_step2Target.transform, m_rotationTime2);
+                Step2Lerp(m_initialObj, m_step2Target.transform, m_rotationTime2);
                 break;
             case 2:
-                ExplodeObj(m_caseObj, m_parentObj, m_bottomPosExploded.transform.position, m_bodyPosExploded.transform.position, m_topPosExploded.transform.position, m_step2lerpDuration);
+                ExplodeObj(m_initialObj, m_parentObj, m_bottomPosExploded.transform.position, m_bodyPosExploded.transform.position, m_topPosExploded.transform.position, m_step2lerpDuration);
                 break;
             case 3:
-                ExpodedViewSlideOut(m_bodyObj, m_bodyPosExplodedOut.transform.position, m_step3lerpDuration);
+                StartLerpingPosition(m_parentObj.transform, m_parentSlideLeft.transform.position, m_step3moveDuration);
+                break;
+            case 4:
+                ExpodedViewSlideOut(m_bodyObj, m_bodyPosExplodedOut.transform.position, m_step4explodeDuration);
+                break;
+            case 5:
+                StartCoroutine(LerpToTransform(m_bodyObj, m_bodyCenterPos.transform, m_step5lerpDuration));
+                StartLerpingPosition(m_topObj.transform, m_topOutPos.transform.position, m_step5lerpDuration-0.05f);
+                StartLerpingPosition(m_bottomObj.transform, m_bottomOutPos.transform.position, m_step5lerpDuration-0.05f);
                 break;
             default:
                 Debug.Log("Counter reaches the last frame...");
@@ -62,6 +85,7 @@ public class Animation : MonoBehaviour
         }
     }
 
+    
     public void ExpodedViewSlideOut(GameObject body, Vector3 bodySlideOutPos, float lerpDuration)
     {
         StartLerpingPosition(body.transform, bodySlideOutPos, lerpDuration);
