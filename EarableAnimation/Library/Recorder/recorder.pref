@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Name: Movie
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 33
+  take: 34
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:
@@ -165,12 +165,12 @@ MonoBehaviour:
   m_Name: Image Sequence
   m_EditorClassIdentifier: 
   enabled: 0
-  take: 19
+  take: 27
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:
       m_Root: 0
-      m_Leaf: Recordings
+      m_Leaf: /SavedRecording
       m_ForceAssetFolder: 0
       m_AbsolutePath: 
     m_FileName: image_<Take>_<Frame>

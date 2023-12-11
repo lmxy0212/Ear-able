@@ -97,22 +97,22 @@ public class Animation : MonoBehaviour
                 case 3:
                     ExpodedViewSlideOut(m_bodyObj, m_bodyPosExplodedOut.transform, m_step4explodeDuration);
                     break;
+                // case 4:
+                    // m_componentParent.SetActive(true);
+                    // StartLerpingPosition(m_lipo.transform, m_lipoEnd.transform.position, durationOut);
+                    // StartLerpingPosition(m_microcontroller.transform, m_microcontrollerEnd.transform.position, durationOut);
+                    // StartLerpingPosition(m_wireless.transform, m_wirelessEnd.transform.position, durationOut);
+                    // StartCoroutine(LerpToTransform(m_PET1, m_PET1End.transform, durationOut));
+                    // StartCoroutine(LerpToTransform(m_PET2, m_PET2End.transform, durationOut));
+                    // break;
                 case 4:
-                    m_componentParent.SetActive(true);
-                    StartLerpingPosition(m_lipo.transform, m_lipoEnd.transform.position, durationOut);
-                    StartLerpingPosition(m_microcontroller.transform, m_microcontrollerEnd.transform.position, durationOut);
-                    StartLerpingPosition(m_wireless.transform, m_wirelessEnd.transform.position, durationOut);
-                    StartCoroutine(LerpToTransform(m_PET1, m_PET1End.transform, durationOut));
-                    StartCoroutine(LerpToTransform(m_PET2, m_PET2End.transform, durationOut));
-                    break;
-                case 5:
                     m_componentParent.SetActive(false);
                     StartCoroutine(LerpToTransform(m_bodyObj, m_bodyCenterPos.transform, m_step5lerpDuration));
                     StartLerpingPosition(m_topObj.transform, m_topOutPos.transform.position, m_step5lerpDuration-0.05f);
                     StartLerpingPosition(m_bottomObj.transform, m_bottomOutPos.transform.position, m_step5lerpDuration-0.05f);
                     break;
-                case 6:
-                    RotateObj(m_bodyObj, 5f, 360f, targetScale);
+                case 5:
+                    RotateObj(m_bodyObj, 7f, 360f, targetScale);
                     break;
                 default:
                     Debug.Log("Counter reaches the last frame...");
